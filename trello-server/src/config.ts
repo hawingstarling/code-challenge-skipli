@@ -1,5 +1,20 @@
+import dotenv from 'dotenv';
+import fs from 'fs';
+
+const env = process.env.NODE_ENV || 'development';
+
+const envFile = env === 'production' ? '.env.production' : '.env';
+
+if (fs.existsSync(envFile)) {
+  dotenv.config({ path: envFile });
+} else {
+  console.warn(`Environment file ${envFile} not found.`);
+}
+
 // Mapper for environment variables
+export const environment = process.env.NODE_ENV;
 export const port = process.env.PORT;
+export const timezone = process.env.TZ;
 
 export const corsUrl = process.env.CORS_URL;
 
