@@ -18,6 +18,8 @@ export const timezone = process.env.TZ;
 
 export const corsUrl = process.env.CORS_URL;
 
+export const logDirectory = process.env.LOG_DIR;
+
 export const firebaseConfig = {
   apiKey: process.env.FIREBASE_APIKEY,
   authDomain: process.env.FIREBASE_AUTHDOMAIN,
