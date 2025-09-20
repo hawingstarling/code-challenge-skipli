@@ -4,6 +4,8 @@ import { corsUrl } from './config';
 import routes from './routes';
 import helmet from 'helmet';
 import { LIMIT_SIZE_REQUEST } from './constants';
+import { NotFoundError } from './core/ApiError';
+import { handlerGlobalException } from './middlewares/handlerGlobalException';
 
 const app = express();
 
@@ -22,5 +24,11 @@ app.use(cors({ origin: corsUrl, optionsSuccessStatus: 200 }));
 
 // Routes
 app.use('/', routes);
+
+// Catch 404 and forward to error handler
+app.use((req, res, next) => next(new NotFoundError()));
+
+// Global Error Handler Middleware
+app.use(handlerGlobalException);
 
 export default app;
