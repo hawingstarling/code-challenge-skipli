@@ -11,6 +11,10 @@ export default class UserModel implements User {
 
   @IsString()
   @IsOptional()
+  verificationCode?: string;
+
+  @IsString()
+  @IsOptional()
   fullName?: string;
 
   @IsString()

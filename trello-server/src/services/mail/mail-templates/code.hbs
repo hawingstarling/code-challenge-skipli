@@ -1,0 +1,125 @@
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>{{subject}}</title>
+    <link rel='preconnect' href='https://fonts.googleapis.com' />
+    <link
+      rel='stylesheet'
+      href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap'
+    />
+    <style>
+      @font-face {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        src: url('https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu7WxKOzY.woff2')
+          format('woff2');
+      }
+      body {
+        background-color: #e3e3e3;
+        margin: 0;
+        padding: 0;
+        font-family: 'Roboto', Arial, sans-serif !important;
+      }
+      .main-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #f2f2f2;
+        padding: 42px 0;
+      }
+      .container {
+        max-width: 400px;
+        margin: 50px auto;
+        background-color: #ffffff;
+        padding: 35px 25px;
+        text-align: center;
+        border-top: 4px solid #1fac58;
+      }
+      .cta-button {
+        display: inline-block;
+        padding: 10px 25px;
+        background: transparent;
+        border: 2px solid #03AC4F;
+        border-radius: 40px;
+        color: #505050;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      .footer {
+        font-size: 12px;
+        color: #84828e;
+        background-color: #f2eff3;
+        border-radius: 8px;
+        padding: 15px;
+        margin-top: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class='main-wrapper'>
+      <div class='container'>
+        <img src='{{logoUrl}}' alt='Logo' width='60' height='39' />
+        <h1
+          style="font-family:'Roboto','Helvetica Neue',Segoe UI,Helvetica,Arial,sans-serif;font-weight: 600;color: #111; font-size: 24px;line-height: 28px;word-spacing: 0px;"
+        >Please get your code 😀</h1>
+        <p
+          style="font-family:'Roboto','Helvetica Neue',Segoe UI,Helvetica,Arial,sans-serif;font-weight: 500;color: #424040;font-size: 16px;letter-spacing: -0.6px;word-spacing: 0px;line-height: 22px;"
+        >The code is valid for
+          <span
+            style="font-family:'Roboto','Helvetica Neue',Segoe UI,Helvetica,Arial,sans-serif;font-weight: 500;color: #EC1E26;font-size: 16px;letter-spacing: -0.6px;word-spacing: 0px;line-height: 22px;"
+          >5 minute.</span>
+          Please do not share this code with anyone.</p>
+        <div class='cta-button'>{{code}}</div>
+        <p
+          style="font-family:'Roboto','Helvetica Neue',Segoe UI,Helvetica,Arial,sans-serif;margin-top: 20px; font-size: 15px;font-weight: 500;color: #424040;letter-spacing: -0.6px;word-spacing: 0px;line-height: 22px;"
+        >
+          You're receiving this email because you have an account in Skipli. If you
+          are not sure why you're receiving this, please contact us by replying
+          to this email.
+        </p>
+        <div
+          class='footer'
+          style="font-family:'Roboto','Helvetica Neue',Segoe UI,Helvetica,Arial,sans-serif; font-size: 16px;font-weight: 500;"
+        >
+          <p>
+            <em
+              style="font-family:'Roboto','Helvetica Neue',Segoe UI,Helvetica,Arial,sans-serif"
+            >Socialize with us</em>
+            on
+            <a
+              href='https://facebook.com/{{facebookPage}}'
+              target='_blank'
+            >Facebook</a>
+            |
+            <a
+              href='https://www.youtube.com/channel/{{youtubeHandle}}'
+              target='_blank'
+            >Youtube</a>
+            |
+            <a
+              href='https://www.pinterest.com/{{pinterestHandle}}'
+              target='_blank'
+            >Pinterest</a>
+            |
+            <a
+              href='https://www.linkedin.com/company/{{linkedinHandle}}'
+              target='_blank'
+            >Linkedin</a>
+          </p>
+          <p>
+            <strong>M:</strong>
+            {{supportPhone}}
+            |
+            <strong>E:</strong>
+            <a
+              href='https://mail.google.com/mail/?view=cm&fs=1&to={{supportEmail}}'
+            >{{supportEmail}}</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -6,6 +6,7 @@ import helmet from 'helmet';
 import { LIMIT_SIZE_REQUEST } from './constants';
 import { NotFoundError } from './core/ApiError';
 import { handlerGlobalException } from './middlewares/handlerGlobalException';
+import path from 'path';
 
 const app = express();
 
@@ -21,6 +22,7 @@ app.use(
   }),
 );
 app.use(cors({ origin: corsUrl, optionsSuccessStatus: 200 }));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Routes
 app.use('/', routes);

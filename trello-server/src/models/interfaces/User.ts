@@ -19,5 +19,6 @@ export default interface User extends BaseModel {
   email?: string;
   fullName?: string;
   imageUsername?: string;
+  verificationCode?: string;
   roles: Role[];
 }
